@@ -56,7 +56,7 @@ html {
 }
 
 body {
-  font-size: 1.6rem; /* 1rem = 10px */
+  font-size: 1.6rem; 
   height: 100vh;
   font-family: "PT Sans", sans-serif;
   font-weight: normal;
@@ -78,7 +78,7 @@ h4 {
   font-size: 1.6rem;
 }
 
-/* Register & Login */
+
 .registerContainer {
   display: flex;
   align-items: center;
@@ -174,7 +174,15 @@ h4 {
   cursor: pointer;
 }
 
-/* Home */
+@media screen and (max-width: 600px) {
+  .registerForm{
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
+
+
+
 .home {
   display: flex;
   align-items: center;
@@ -207,7 +215,8 @@ h4 {
     width: 34.8%;
   }
 }
-/* Navbar */
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -254,7 +263,8 @@ h4 {
     font-size: 15px !important;
   }
 }
-/* Search */
+
+
 .searchForm {
   border-bottom: 1px solid var(--gris);
 }
@@ -291,7 +301,11 @@ h4 {
     font-size: 12px;
   }
 }
-/* Nothing Selected */
+
+.nothingSelected {
+  flex: 2;
+}
+
 .nothingNavbar {
   display: flex;
   justify-content: center;
@@ -307,6 +321,7 @@ h4 {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 300px;
   padding: 10px;
   margin: 15px;
   height: calc(100% - 100px);
@@ -318,7 +333,36 @@ h4 {
   font-size: 80px !important;
 }
 
-/* Chats */
+@media screen and (max-width: 600px) {
+  .nothingNavbar h1{
+    font-size: 35px;
+  }
+
+  .nothingHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 300px;
+    padding: 10px;
+    margin: 25px;
+    height: calc(100% - 100px);
+    border-radius: 5px;
+    background-color: var(--primario);
+    color: var(--oscuro);
+  }
+
+  .nothingHeader h2{
+    font-size: 25px !important;
+  }
+
+  .nothingHeader p{
+    font-size: 45px !important;
+  }
+}
+
+
 .chats {
   overflow: auto;
   height: calc(100% - 190px);
@@ -414,12 +458,7 @@ h4 {
     font-size: 10px;
   }
 }
-/* NothingSelected */
-.nothingSelected {
-  flex: 2;
-}
 
-/* Chat */
 .chat {
   flex: 2;
 }
@@ -470,7 +509,8 @@ h4 {
     font-size: 15px !important;
   }
 }
-/* Messages */
+
+
 .messages {
   background-color: var(--oscuroClaro);
   color: var(--blanco);
@@ -559,7 +599,8 @@ h4 {
     max-width: max-content;
   }
 }
-/* Input */
+
+
 .input {
   display: flex;
   align-items: center;
@@ -633,4 +674,4 @@ h4 {
   .input input::placeholder {
     font-size: 15px;
   }
-}/*# sourceMappingURL=index.css.map */
+}
